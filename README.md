@@ -55,7 +55,7 @@ Things to keep in mind with these recommendation/results is that there will like
 
 ## Technologies
 
-This is a Python 3.8 project ran in Google Colab but can be used in JupyterLab using a Conda dev environment. 
+This is a Python 3.7 project ran in JupyterLab using a Conda dev environment. 
 
 The following dependencies are used: 
 1. [Jupyter](https://jupyter.org/) - Running code 
