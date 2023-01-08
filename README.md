@@ -1,4 +1,4 @@
-# Module 12 Challenge - Credit Fraud Logistic Regression
+# Credit Fraud Logistic Regression - UW Fintech Bootcamp Module 12 Challenge
 
 In this project I apply and compare logistic regression models to an imbalanced dataset of historical lending activity in order to predict healthy and high-risk loans. 
 
