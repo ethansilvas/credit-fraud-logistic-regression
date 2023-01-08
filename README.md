@@ -11,7 +11,7 @@ In this project I apply and compare logistic regression models to an imbalanced 
 
 This analysis aims to compare two logistic regression models, one that trains with imbalanced data and one that uses random oversampling, to see the differences in their predictive performance. The dataset used is labeled loan data with features loan_size, interest_rate, borrower_income, debt_to_income, num_of_accounts, derogatory_marks, and total_debt as shown below: 
 
-![DataFrame head showing features loan_size, interest_rate, borrower_income, debt_to_income, num_of_accounts, derogatory_marks, and total_debt](/Resources/features.png)
+![DataFrame head showing features loan_size, interest_rate, borrower_income, debt_to_income, num_of_accounts, derogatory_marks, and total_debt](/Resources/Images/features.png)
 
 The loan_status column is the label to distinguish between healthy loans (0) and high-risk loans (1), but the original data is heavily imbalanced with 75,036 healthy loans and 2500 high-risk loans. 
 
@@ -29,7 +29,7 @@ Both models are mostly the same as both are scikit-learn LogisticRegression mode
         * High-risk loans = 0.91
 
     Confusion matrix:<br>
-    ![Confusion matrix showing 18663 to 102 for healthy loans and 56 to 563 for high-risk loans](/Resources/original-confusion-matrix.png)
+    ![Confusion matrix showing 18663 to 102 for healthy loans and 56 to 563 for high-risk loans](/Resources/Images/original-confusion-matrix.png)
 
 
 * LogisticRegression model trained on randomly oversampled data:
@@ -42,7 +42,7 @@ Both models are mostly the same as both are scikit-learn LogisticRegression mode
         * High-risk loans = 0.99
 
     Confusion matrix:<br>
-    ![Confusion matrix showing 18649 to 116 for healthy loans and 4 to 615 for high-risk loans](/Resources/oversampled-confusion-matrix.png)
+    ![Confusion matrix showing 18649 to 116 for healthy loans and 4 to 615 for high-risk loans](/Resources/Images/oversampled-confusion-matrix.png)
 
 
 ## Summary
@@ -62,7 +62,8 @@ The following dependencies are used:
 2. [Conda](https://github.com/conda/conda) (4.13.0) - Dev environment
 3. [Pandas](https://github.com/pandas-dev/pandas) (1.3.5) - Data analysis
 4. [Numpy](https://numpy.org/) (1.21.5) - Data calculations + Pandas support
-
+5. [Scikit-learn](https://scikit-learn.org/stable/index.html) (1.0.2) - Machine learning models and tools
+6. [Imbalanced-learn](https://imbalanced-learn.org/stable/) (0.10.1) - Imbalanced classification dataset tools
 
 ---
 
@@ -80,7 +81,7 @@ Then install the requirements with `conda install --name myenv --file requiremen
 
 ## Usage
 
-The Jupyter notebook []() will provide all steps of the data collection, preparation, and analysis. Data visualizations are shown inline and accompanying analysis responses are provided.
+The Jupyter notebook [credit_risk_resampling_ipynb](/credit_risk_resampling.ipynb) will provide all steps of the data collection, preparation, and analysis. Data visualizations are shown inline and accompanying analysis responses are provided.
 
 ---
 
