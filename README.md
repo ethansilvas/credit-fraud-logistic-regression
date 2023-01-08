@@ -15,27 +15,41 @@ This analysis aims to compare two logistic regression models, one that trains wi
 
 The loan_status column is the label to distinguish between healthy loans (0) and high-risk loans (1), but the original data is heavily imbalanced with 75,036 healthy loans and 2500 high-risk loans. 
 
-Each model is mostly the same as both are scikit-learn LogisticRegression models. However they differ because, after splitting the data into training and testing data, one is trained using the original (imbalanced) data and the other is trained using randomly oversampled data which end up in an even 56,271 values for both healthy and high-risk loans. After they are trained, they both predict on the same testing data and the results are analyzed using scikit-learn's balanced_accuracy_score, confusion_matrix, and classification_report_imbalanced methods. 
+Both models are mostly the same as both are scikit-learn LogisticRegression models. However they differ because, after splitting the data into training and testing data, one is trained using the original (imbalanced) data and the other is trained using randomly oversampled data which end up in an even 56,271 values for both healthy and high-risk loans. After they are trained, they both predict on the same testing data and the results are analyzed using scikit-learn's balanced_accuracy_score, confusion_matrix, and classification_report_imbalanced methods. 
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
+* LogisticRegression model trained on original, imbalanced, data:
+    * Balanced accuracy score = 0.9520479254722232
+        * Precision scores:
+        * Healthy loans = 1.0 
+        * High-risk loans = 0.85
+    * Recall scores: 
+        * Healthy loans = 0.99
+        * High-risk loans = 0.91
 
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
+    Confusion matrix:<br>
+    ![Confusion matrix showing 18663 to 102 for healthy loans and 56 to 563 for high-risk loans](/Resources/original-confusion-matrix.png)
 
 
+* LogisticRegression model trained on randomly oversampled data:
+    * Balanced accuracy score: 0.9936781215845847
+    * Precision scores:
+        * Healthy loans = 1.0
+        * High-risk loans = 0.84
+    * Recall scores: 
+        * Healthy loans = 0.99
+        * High-risk loans = 0.99
 
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+    Confusion matrix:<br>
+    ![Confusion matrix showing 18649 to 116 for healthy loans and 4 to 615 for high-risk loans](/Resources/oversampled-confusion-matrix.png)
+
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+Since this model focuses on predicting high-risk loans, I would recommend using the randomly oversampled model because it has a 0.99 recall score for high-risk loans compared to the original data model's recall of 0.91 for high-risk loans. This increase in recall score only comes at the cost of a 0.01 reduction in precision for high-risk loans, but this is negligible since the score is still pretty high at 0.84. 
 
-If you do not recommend any of the models, please justify your reasoning.
+Things to keep in mind with these recommendation/results is that there will likely need to be a check for overfitting to our data and it would be a good idea to run this analysis with a validation set as well. However, assuming that the models learned well and aren't highly overfit to the dataset, then it can be said that oversampling for the purpose of predicting high-risk loans is beneficial to performance.
 
 ---
 
