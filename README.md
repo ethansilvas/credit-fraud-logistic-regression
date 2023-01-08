@@ -1,4 +1,4 @@
-# Module 11 Challenge - Credit Fraud Logistic Regression
+# Module 12 Challenge - Credit Fraud Logistic Regression
 
 In this project I apply and compare logistic regression models to an imbalanced dataset of historical lending activity in order to predict healthy and high-risk loans. 
 
