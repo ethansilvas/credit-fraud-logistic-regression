@@ -21,12 +21,12 @@ Both models are mostly the same as both are scikit-learn LogisticRegression mode
 
 * LogisticRegression model trained on original, imbalanced, data:
     * Balanced accuracy score = 0.9520479254722232
-        * Precision scores:
-        * Healthy loans = 1.0 
-        * High-risk loans = 0.85
+    * Precision scores:
+        * Healthy loans = 1.0 = Of the loans that the model predicted to be healthy, about 100% of them were actually healthy loans
+        * High-risk loans = 0.85 = Of the loans that the model predicted to be high-risk, about 85% of them were actually high-risk loans
     * Recall scores: 
-        * Healthy loans = 0.99
-        * High-risk loans = 0.91
+        * Healthy loans = 0.99 = Of all the actually healthy loans, the model correctly predicted them to be healthy about 99% of the time
+        * High-risk loans = 0.91 = Of all the actually high-risk loans, the model correctly predicted them to be high-risk about 91% of the time
 
     Confusion matrix:<br>
     ![Confusion matrix showing 18663 to 102 for healthy loans and 56 to 563 for high-risk loans](/Resources/Images/original-confusion-matrix.png)
@@ -35,11 +35,11 @@ Both models are mostly the same as both are scikit-learn LogisticRegression mode
 * LogisticRegression model trained on randomly oversampled data:
     * Balanced accuracy score: 0.9936781215845847
     * Precision scores:
-        * Healthy loans = 1.0
-        * High-risk loans = 0.84
+        * Healthy loans = 1.0 = Of the loans that the model predicted to be healthy, about 100% of them were actually healthy loans
+        * High-risk loans = 0.84 = Of the loans that the model predicted to be high-risk, about 84% of them were actually high-risk loans
     * Recall scores: 
-        * Healthy loans = 0.99
-        * High-risk loans = 0.99
+        * Healthy loans = 0.99 = Of all the actually healthy loans, the model correctly predicted them to be healthy about 99% of the time
+        * High-risk loans = 0.99 = Of all the actually high-risk loans, the model correctly predicted them to be high-risk about 99% of the time
 
     Confusion matrix:<br>
     ![Confusion matrix showing 18649 to 116 for healthy loans and 4 to 615 for high-risk loans](/Resources/Images/oversampled-confusion-matrix.png)
